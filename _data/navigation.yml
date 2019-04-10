@@ -4,14 +4,11 @@ main:
   - title: "CV"
     url: /cv/
 
-  - title: "Publications"
-    url: /publications/
+  - title: "Achievements"
+    url: /achievements/
 
   - title: "Patents"
     url: /patents/
-
-  - title: "Portfolio"
-    url: /portfolio/
 
   - title: "Blog Posts"
     url: /year-archive/
