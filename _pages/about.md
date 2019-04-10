@@ -8,15 +8,18 @@ redirect_from:
   - /about.html
 ---
 
-Hi! This website is under construction. Please check back again later.
-
-**Under Construction**
-
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque dolor sed egestas pretium. Maecenas non nisi non tellus molestie commodo eu quis turpis. Vestibulum egestas urna at dapibus pellentesque. Nulla fringilla consectetur nibh, quis blandit magna. Nulla mi tellus, scelerisque eget pharetra vitae, sagittis nec est. Cras fringilla ex scelerisque nisi tristique volutpat. Donec tempor nisl at metus ultrices posuere. Sed tempor nec dui sodales blandit. Integer finibus eget nunc nec mattis. Ut pretium libero ac pharetra fringilla. Duis ut dolor quis arcu cursus suscipit a ac sapien.
-
-In posuere pulvinar elit, ac rutrum enim mattis et. Nulla commodo est vel iaculis lacinia. Proin volutpat justo metus, sit amet tristique sapien maximus vitae. Aenean venenatis faucibus volutpat. Nullam commodo nunc suscipit blandit viverra. Sed condimentum pharetra quam at consequat. Fusce imperdiet dui ante. Morbi sit amet mi ac ipsum dignissim feugiat eget et velit. Mauris lobortis lacus sem, id varius est dictum et. In scelerisque turpis non quam viverra, id posuere dolor sollicitudin. Curabitur id diam id justo pellentesque fringilla. Mauris viverra magna sit amet tortor accumsan, eu venenatis urna interdum. Nulla ac tristique dui.
+Hi! I am a graduate student at USC Viterbi School of Engineering and will be graduating in Decemeber, 2020. My interests include Natural Language Processing, Information Extraction, Machine Learning and Web Development.
+<br /><br />
+I have 4 years of industry experience working with Citrix Systems at Bangalore (India) during 2015 to 2018 in the Globalization Services team, starting my journey as an Intern to getting promoted to a Software Engineer 2. 
+During my time at Citrix I worked on analyzing large chunks of data from the global customers and converting it into understandable information that helped take crucial business decisions.
+I have also worked on various web technologies and have been developing intuitive dashboards and web services for easy consumption and accessibility of information.
+My role required a perfect blend of technical skills, leadership, management, communication and team work which helped me grow both personally and professionally.
+<br /><br />
+I completed my B.Tech in Computer Science and Engineering in May, 2015 from Manipal Institute of Technology, Manipal (India). I served as the Membership Head at the IEEE Student Branch, Manipal 
+and was involved with interesting big data projects during my time at Manipal.
+<br /><br />
+My other interests include photography, playing various musical instruments and sports like swimming and basketball. My love for music and sports made me an active participant in cultural events which played a vital role in honing my social skills.
 
 For more info
 ------
-[Email me](mailto:chiragagarwal2511@gmail.com)
+[View my CV](https://chiragag.github.io/cv/) | [Email me](mailto:chiragagarwal2511@gmail.com) 
