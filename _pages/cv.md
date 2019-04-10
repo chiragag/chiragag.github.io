@@ -23,7 +23,7 @@ Education
 
 Work experience
 ======
-* <strong>Software Engineer 2: Citrix R&D, Bangalore - India</strong> <em>April 2017 - November 2018</em>
+* <strong>Software Engineer 2: Citrix R&D, Bangalore - India</strong> <em> (April 2017 - November 2018)</em>
   * <em><u>Product Usage Analytics:</u></em>  Created an analytics environment using Python and Tableau which is a single place to get the high and low impact areas and performance trends using customer usage data from various sources like Citrix’s CEIP database, Google Analytics, Play Store, iTunes Connect, etc.  This helps in prioritizing efforts, ROI calculations and making crucial business decisions by having clear opportunity and risk analysis visualizations.
   * <em><u>Citrix Video Library:</u></em>  Created and Maintained the Citrix wide video library using Brightcove and was responsible for organizing and scanning all video files to ensure that the format and standards are satisfied
   * <em><u>Customer Case Text Analytics:</u></em>  Developed a framework to fetch (from Salesforce), filter and analyze the customer support cases using text data mining.  Applied text categorization principles to classify the cases into appropriate buckets for further analysis and triage.
@@ -32,21 +32,21 @@ Work experience
   * <em><u>Citrix Documentation Feedback:</u></em>  Developed the end to end feedback gathering system for docs.citrix.com
   * <em><u>Lean Innovation Challenge 2018:</u></em>  Presented an idea with a working prototype for a new product involving workflow automation to improve employee productivity and was selected in the top 3 out of the 98 ideas submitted across Bangalore.
   
-* <strong>Software Engineer 1: Citrix R&D, Bangalore - India</strong> <em>July 2015 - March 2017</em>
+* <strong>Software Engineer 1: Citrix R&D, Bangalore - India</strong> <em> (July 2015 - March 2017)</em>
   * <em><u>Voice of Customer Analysis:</u></em>  Developed a sentiment analytics system that automates data fetching from app stores and analyzes the textual data like review and comments using concepts of natural language processing and computational linguistics to aid business decisions.
   * <em><u>Lean Innovation Challenge 2017:</u></em>  Presented an idea with a working prototype for a new product involving secure offline file sharing to the senior executives and was selected as one of the top 5 out of the 150 ideas submitted across Bangalore.
   * <em><u>Test Planning Platform:</u></em>  Designed and implemented an internal web portal to effectively plan the test coverage for all Citrix product releases by getting the inputs from Test Automation team and Defect Prevention team.  
   * <em><u>Automation frameworks:</u></em>  Created automation frameworks in Java, C# and PowerShell for both Mobile and Web products of Citrix to completely eliminate manual testing efforts.  Wrote core libraries to be used by the automation team.
   * <em><u>DevOps Portal:</u></em>  Built a web interface using .NET for improving test environment utilization and team collaboration which helped build, test, and release software faster and with more reliability.
 
-* <strong>Software Engineering Intern: Citrix R&D, Bangalore - India</strong> <em>January 2015 - June 2017</em>
+* <strong>Software Engineering Intern: Citrix R&D, Bangalore - India</strong> <em> (January 2015 - June 2017)</em>
   * <em><u>Athena and Results Manager:</u></em>  Created a dashboard to track and triage automation results for all Citrix products.  Built parsers for different types of logs generated, and APIs to accept the parser inputs.  This internal dashboard is used by all automators in the team to continuously analyze and improve automation efficiency.
 
 Academic Projects
 ======
-* <strong>Urban Sound Separation and Classification</strong> <em>April 2019</em>
+* <strong>Urban Sound Separation and Classification</strong> <em> (April 2019)</em>
   * Working on designing and training a deep learning model for identifying various sources of sounds in an input audio file.
-* <strong>Stock Market Prediction</strong> <em>July 2014</em>
+* <strong>Stock Market Prediction</strong> <em> (July 2014)</em>
   * Designed and implemented a Sentiment Analysis model for predicting prices of Oil Securities using Big Data Analytics techniques like distributed processing using Map-Reduce, etc.  using large amounts of raw unstructured data from Twitter, News feeds, etc.
 
 Service and Leadership
