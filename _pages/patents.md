@@ -9,5 +9,7 @@ redirect_from:
 
 Patents
 ======
-* Filed 4 patents while working at Citrix. Awaiting USPTO Patent numbers.
+* <strong>Authentication for secure file sharing</strong>: U.S. Patent Application filed in April 2019. <br />Application Number: 16/371,406.
+* <strong>Secure offline streaming of content</strong>: U.S. Patent Application filed in December 2018. <br />Application Number: 16/223,475.
+* <strong>Cloud authenticated offline file sharing</strong>: U.S. Patent Application filed in March 2018. <br />Application Number: 15/924,771.
 	
