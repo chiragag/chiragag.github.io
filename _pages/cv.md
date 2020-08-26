@@ -13,8 +13,8 @@ redirect_from:
 
 Skills
 ======
-* <em>Programming Languages:</em> C#, Java, SQL, C++, Python, Perl, HTML, CSS, Javascript, Scala
-* <em>Other Technical Tools and Frameworks: Spark, Tableau, PowerBI, .NET, Git, Jira</em>
+* <em>Programming Languages:</em> Java, Javascript, C#, SQL, Python, C++, Perl, HTML, CSS, Scala
+* <em>Other Technical Tools and Frameworks: React, Redux, NodeJS, Spark, .NET, Angular, Tableau, PowerBI, Git, Jira</em>
 
 Education
 ======
@@ -23,7 +23,11 @@ Education
 
 Work experience
 ======
-* <strong>Student Software Developer: USC Norris Comprehensive Cancer Center, Los Angeles - USA</strong> <em> (May 2019 - Present)</em>
+* <strong>Software Development Engineer Intern: Amazon, Seattle - USA</strong> <em> (May 2020 - August 2020)</em>
+  * <em><u>Multi-Item Concessions Support:</u></em>  Added backend concessions support for multi-item Amazon orders for the Contact Us ChatBot. Exceeded the planned scope by supporting Fresh orders, damaged items and missing items in shipment scenarios.
+  * <em><u>ChatBot Multi-Item Picker:</u></em>  Developed a new item picker using React and Redux for customers to select the items and their quantities for concession on the chat bot. <a target="_blank" href="https://www.amazon.com/gp/help/customer/contact-us">Link to Chat Bot</a>
+
+* <strong>Student Software Developer: USC Norris Comprehensive Cancer Center, Los Angeles - USA</strong> <em> (May 2019 - May 2020)</em>
   * <em><u>Publications Portal:</u></em>  Contributed to development of a portal to analyze and maintain cancer publications using ASP.NET and SQL Server. Currently being used by Stanford, Yale and 8 other cancer centers across the USA. <a target="_blank" href="http://uscnorris.com/PubAdmin/">Link</a>
   * <em><u>ORIEN USC Website:</u></em>  Developed a responsive website for Oncology Research Information Exchange Network team at USC. <a target="_blank" href="http://uscnorris.com/ORIEN/">Link</a>
 
