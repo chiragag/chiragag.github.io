@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Chirag Agarwal — Software Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg: oklch(0.975 0.008 80);
+    --bg-tint: oklch(0.955 0.012 80);
+    --ink: oklch(0.22 0.012 60);
+    --ink-soft: oklch(0.42 0.012 60);
+    --ink-muted: oklch(0.58 0.010 60);
+    --rule: oklch(0.88 0.010 70);
+    --rule-soft: oklch(0.92 0.008 70);
+    --accent: oklch(0.62 0.135 45);
+    --accent-soft: oklch(0.62 0.135 45 / 0.10);
+
+    --serif: "Instrument Serif", "Times New Roman", serif;
+    --sans: "Geist", ui-sans-serif, system-ui, -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+    --col: 720px;
+    --gutter: clamp(20px, 4vw, 48px);
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: "ss01", "cv11";
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid var(--rule);
+    transition: border-color .18s ease, color .18s ease;
+  }
+  a:hover { border-color: var(--accent); color: var(--accent); }
+
+  ::selection { background: var(--accent-soft); color: var(--ink); }
+
+  /* --- Page shell ----------------------------------------------------- */
+  .page {
+    max-width: var(--col);
+    margin: 0 auto;
+    padding: clamp(48px, 9vw, 96px) var(--gutter) 96px;
+  }
+
+  /* --- Top bar -------------------------------------------------------- */
+  .topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    padding-bottom: 56px;
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.02em;
+    color: var(--ink-muted);
+    text-transform: uppercase;
+  }
+  .topbar .left { display: flex; gap: 16px; align-items: baseline; }
+  .topbar .crumb { color: var(--ink); }
+  .topbar nav { display: flex; gap: 22px; }
+  .topbar nav a {
+    border: none;
+    color: var(--ink-muted);
+  }
+  .topbar nav a:hover { color: var(--accent); }
+
+  /* --- Hero ----------------------------------------------------------- */
+  .hero {
+    padding-bottom: 64px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-bottom: 28px;
+  }
+  .status .dot {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: oklch(0.66 0.14 145);
+    box-shadow: 0 0 0 3px oklch(0.66 0.14 145 / 0.18);
+  }
+  .hero h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(56px, 9vw, 96px);
+    line-height: 0.98;
+    letter-spacing: -0.015em;
+    margin: 0 0 28px;
+    color: var(--ink);
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--accent);
+  }
+  .hero .lede {
+    font-size: 19px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    max-width: 56ch;
+    margin: 0 0 28px;
+    font-weight: 300;
+    text-wrap: pretty;
+  }
+  .hero .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--ink-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .hero .meta span::before { content: "→  "; color: var(--rule); }
+
+  /* --- Section -------------------------------------------------------- */
+  section {
+    padding: 64px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  section:last-of-type { border-bottom: none; }
+
+  .section-head {
+    display: block;
+    margin-bottom: 36px;
+  }
+  .section-head .num {
+    display: block;
+    font-family: var(--mono);
+    font-size: 11.5px;
+    color: var(--ink-muted);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .section-head .num::after {
+    content: "";
+    display: inline-block;
+    width: 32px;
+    height: 1px;
+    background: var(--rule);
+    vertical-align: middle;
+    margin-left: 12px;
+    transform: translateY(-2px);
+  }
+  .section-head h2 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    margin: 0;
+    color: var(--ink);
+  }
+  .section-head h2 em { font-style: italic; color: var(--ink-muted); font-size: 0.7em; margin-left: 8px;}
+
+  /* --- Prose ---------------------------------------------------------- */
+  .prose {
+    grid-column: 2;
+    max-width: 60ch;
+  }
+  .prose p {
+    margin: 0 0 1.1em;
+    font-size: 16.5px;
+    line-height: 1.65;
+    color: var(--ink-soft);
+    text-wrap: pretty;
+  }
+  .prose p:last-child { margin-bottom: 0; }
+  .prose strong { color: var(--ink); font-weight: 500; }
+
+  .body-grid {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 16px;
+  }
+
+  /* --- Work list ------------------------------------------------------ */
+  .work-list { list-style: none; padding: 0; margin: 0; grid-column: 2;}
+  .work-item {
+    padding: 22px 0;
+    border-top: 1px solid var(--rule-soft);
+  }
+  .work-item:first-child { border-top: none; padding-top: 0;}
+  .work-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 24px;
+    align-items: baseline;
+  }
+  .work-role {
+    font-size: 16.5px;
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .work-role .at { color: var(--ink-muted); font-weight: 400; }
+  .work-date {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    color: var(--ink-muted);
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+  }
+  .work-loc {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    color: var(--ink-muted);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+  .work-summary {
+    margin: 12px 0 0;
+    font-size: 15.5px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    max-width: 60ch;
+    text-wrap: pretty;
+  }
+  details.work-detail {
+    margin-top: 10px;
+  }
+  details.work-detail > summary {
+    list-style: none;
+    cursor: pointer;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--ink-muted);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 0;
+  }
+  details.work-detail > summary::-webkit-details-marker { display: none; }
+  details.work-detail > summary::after {
+    content: "[ + ]";
+    color: var(--ink-muted);
+    transition: color .18s;
+  }
+  details.work-detail[open] > summary::after { content: "[ − ]"; color: var(--accent); }
+  details.work-detail > summary:hover { color: var(--accent); }
+  .detail-list {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0 0;
+    border-left: 1px solid var(--rule-soft);
+  }
+  .detail-list li {
+    padding: 8px 0 8px 18px;
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.55;
+  }
+  .detail-list li b {
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  /* --- Project cards -------------------------------------------------- */
+  .projects { grid-column: 2; display: flex; flex-direction: column; gap: 0; }
+  .project {
+    display: grid;
+    grid-template-columns: 80px 1fr auto;
+    gap: 20px;
+    align-items: baseline;
+    padding: 18px 0;
+    border-top: 1px solid var(--rule-soft);
+  }
+  .project:first-child { border-top: none; padding-top: 0;}
+  .project .pnum {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    color: var(--ink-muted);
+  }
+  .project .ptitle {
+    font-size: 16.5px;
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .project .pmeta {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--ink-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+  .project p {
+    grid-column: 2 / 4;
+    margin: 4px 0 0;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    max-width: 58ch;
+  }
+
+  /* --- Achievements --------------------------------------------------- */
+  .achv-grid {
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--rule-soft);
+    border: 1px solid var(--rule-soft);
+  }
+  .achv {
+    background: var(--bg);
+    padding: 22px 22px;
+  }
+  .achv .ah {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: baseline;
+    margin-bottom: 8px;
+  }
+  .achv h3 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.15;
+    margin: 0;
+    color: var(--ink);
+    letter-spacing: -0.005em;
+  }
+  .achv .adate {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--ink-muted);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .achv p {
+    font-size: 14.5px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    margin: 0 0 10px;
+  }
+  .achv-photo {
+    margin: 0 0 14px;
+    border: 1px solid var(--rule-soft);
+    background: var(--bg-tint);
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    display: block;
+  }
+  .achv-photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(0.85);
+    transition: filter .3s ease, transform .6s ease;
+  }
+  .achv:hover .achv-photo img { filter: saturate(1); transform: scale(1.02); }
+  .achv .alink {
+    font-family: var(--mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--accent);
+    border: none;
+  }
+  .achv .alink:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+  /* --- Earlier recognitions ------------------------------------------ */
+  .more-achv {
+    grid-column: 2;
+    margin-top: 22px;
+    border-top: 1px solid var(--rule-soft);
+    padding-top: 18px;
+  }
+  .more-achv > summary {
+    list-style: none;
+    cursor: pointer;
+    font-family: var(--mono);
+    font-size: 11.5px;
+    color: var(--ink-muted);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 0;
+  }
+  .more-achv > summary::-webkit-details-marker { display: none; }
+  .more-achv > summary::after {
+    content: "[ + ]";
+    color: var(--ink-muted);
+  }
+  .more-achv[open] > summary::after { content: "[ − ]"; color: var(--accent); }
+  .more-achv > summary:hover { color: var(--accent); }
+  .more-list {
+    list-style: none;
+    padding: 0;
+    margin: 18px 0 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+  .more-list li {
+    display: grid;
+    grid-template-columns: 88px 1fr;
+    gap: 14px;
+    align-items: start;
+    padding: 12px 0;
+    border-top: 1px solid var(--rule-soft);
+  }
+  .mini-photo {
+    border: 1px solid var(--rule-soft);
+    background: var(--bg-tint);
+    aspect-ratio: 4 / 3;
+    display: block;
+    overflow: hidden;
+  }
+  .mini-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: saturate(0.85);
+  }
+  .more-list .mtitle {
+    font-size: 14.5px;
+    color: var(--ink);
+    font-weight: 500;
+    line-height: 1.35;
+  }
+  .more-list .mdate {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--ink-muted);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-left: 6px;
+  }
+  .more-list p {
+    margin: 6px 0 0;
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: var(--ink-soft);
+  }
+  @media (max-width: 640px) {
+    .more-list { grid-template-columns: 1fr; }
+  }
+
+  /* --- Patents -------------------------------------------------------- */
+  .patents { grid-column: 2; list-style: none; padding: 0; margin: 0; }
+  .patents li {
+    padding: 18px 0;
+    border-top: 1px solid var(--rule-soft);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 16px 24px;
+  }
+  .patents li:first-child { border-top: none; padding-top: 0;}
+  .patents .ptitle {
+    font-size: 16px;
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .patents .pno {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    color: var(--ink-muted);
+    white-space: nowrap;
+  }
+  .patents .pdate {
+    grid-column: 1 / 3;
+    font-size: 14.5px;
+    color: var(--ink-soft);
+    margin: 0;
+  }
+
+  /* --- Skills chips --------------------------------------------------- */
+  .skills { grid-column: 2; }
+  .skills h4 {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    color: var(--ink-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-weight: 500;
+    margin: 0 0 10px;
+  }
+  .skills .group { margin-bottom: 22px; }
+  .skills .group:last-child { margin-bottom: 0; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip {
+    font-family: var(--mono);
+    font-size: 12px;
+    padding: 5px 10px;
+    background: var(--bg-tint);
+    border: 1px solid var(--rule-soft);
+    border-radius: 2px;
+    color: var(--ink);
+    letter-spacing: 0.01em;
+  }
+
+  /* --- Education ------------------------------------------------------ */
+  .edu { grid-column: 2; list-style: none; padding: 0; margin: 0; }
+  .edu li {
+    padding: 18px 0;
+    border-top: 1px solid var(--rule-soft);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 4px 24px;
+  }
+  .edu li:first-child { border-top: none; padding-top: 0; }
+  .edu .deg { font-size: 16px; color: var(--ink); font-weight: 500; }
+  .edu .school { color: var(--ink-soft); font-size: 15px; }
+  .edu .year {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    color: var(--ink-muted);
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .edu .gpa {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    color: var(--ink-muted);
+    white-space: nowrap;
+  }
+
+  /* --- Contact / Footer ----------------------------------------------- */
+  .contact h2 em { color: var(--accent); }
+  .channels { grid-column: 2; display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--rule-soft); border: 1px solid var(--rule-soft);}
+  .channels a {
+    background: var(--bg);
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    border: none;
+    transition: background .18s;
+  }
+  .channels a:hover { background: var(--bg-tint); color: var(--ink);}
+  .channels .label {
+    font-family: var(--mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink-muted);
+  }
+  .channels .value {
+    font-family: var(--serif);
+    font-size: 22px;
+    line-height: 1.2;
+    color: var(--ink);
+  }
+  .channels a:hover .value { color: var(--accent); }
+
+  footer {
+    padding-top: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--ink-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  footer a { border: none; color: var(--ink-muted); }
+  footer a:hover { color: var(--accent); }
+
+  /* --- Responsive ----------------------------------------------------- */
+  @media (max-width: 640px) {
+    .body-grid, .section-head { grid-template-columns: 1fr; }
+    .prose, .work-list, .projects, .achv-grid, .patents, .skills, .edu, .channels { grid-column: 1;}
+    .achv-grid, .channels { grid-template-columns: 1fr; }
+    .topbar { flex-wrap: wrap; }
+    .topbar nav { width: 100%; }
+    .project { grid-template-columns: 50px 1fr; }
+    .project .pmeta { grid-column: 2; }
+    .project p { grid-column: 1 / 3;}
+    .hero h1 { font-size: clamp(48px, 14vw, 72px);}
+  }
+
+  /* --- Theme variants (Tweaks) --------------------------------------- */
+  body[data-palette="terracotta"] { --accent: oklch(0.62 0.135 45); }
+  body[data-palette="ink"]        { --accent: oklch(0.42 0.04 250); }
+  body[data-palette="moss"]       { --accent: oklch(0.55 0.075 145); }
+  body[data-palette="plum"]       { --accent: oklch(0.48 0.10 340); }
+
+  body[data-tone="paper"] {
+    --bg: oklch(0.975 0.008 80); --bg-tint: oklch(0.955 0.012 80);
+    --ink: oklch(0.22 0.012 60);
+  }
+  body[data-tone="cool"] {
+    --bg: oklch(0.985 0.004 240); --bg-tint: oklch(0.965 0.006 240);
+    --ink: oklch(0.22 0.012 250); --ink-soft: oklch(0.42 0.012 250); --ink-muted: oklch(0.58 0.010 250);
+    --rule: oklch(0.88 0.008 240); --rule-soft: oklch(0.93 0.006 240);
+  }
+  body[data-tone="dusk"] {
+    --bg: oklch(0.18 0.012 60); --bg-tint: oklch(0.22 0.012 60);
+    --ink: oklch(0.94 0.008 80); --ink-soft: oklch(0.78 0.010 70); --ink-muted: oklch(0.55 0.012 70);
+    --rule: oklch(0.32 0.012 60); --rule-soft: oklch(0.26 0.012 60);
+  }
+
+  body[data-display="serif"] .hero h1,
+  body[data-display="serif"] .section-head h2,
+  body[data-display="serif"] .achv h3,
+  body[data-display="serif"] .channels .value { font-family: var(--serif); }
+
+  body[data-display="sans"] .hero h1,
+  body[data-display="sans"] .section-head h2,
+  body[data-display="sans"] .achv h3,
+  body[data-display="sans"] .channels .value {
+    font-family: var(--sans);
+    font-weight: 400;
+    letter-spacing: -0.025em;
+  }
+  body[data-display="sans"] .hero h1 em { font-style: normal; }
+  body[data-display="sans"] .hero h1 { font-weight: 300; }
+  body[data-display="sans"] .section-head h2 { font-weight: 500;}
+
+  body[data-density="compact"] section { padding: 48px 0;}
+  body[data-density="airy"]    section { padding: 84px 0;}
+
+</style>
+</head>
+<body data-palette="terracotta" data-tone="paper" data-display="serif" data-density="default">
+
+<div class="page">
+
+  <!-- Topbar -->
+  <header class="topbar">
+    <div class="left">
+      <span class="crumb">CA — Index</span>
+    </div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="status"><span class="dot"></span><span>Currently at AWS — Agentic AI</span></div>
+    <h1>Chirag <em>Agarwal.</em><br/>Software engineer<br/>building agentic systems.</h1>
+    <p class="lede">
+      I work on Agentic AI, GenAI, and distributed systems at AWS — founding member of Quick Research, patent holder, and a long-time builder of conversational and customer-service platforms at Amazon scale.
+    </p>
+    <div class="meta">
+      <span>Seattle, WA</span>
+      <span>AWS · Agentic AI</span>
+      <span>USC '20 · MS Computer Science</span>
+    </div>
+  </div>
+
+  <!-- About -->
+  <section id="about">
+    <div class="section-head">
+      <span class="num">01 / About</span>
+      <h2>A short note <em>on me</em></h2>
+    </div>
+    <div class="body-grid">
+      <span></span>
+      <div class="prose">
+        <p>I'm a Software Development Engineer at <strong>AWS Agentic AI</strong>, based in Seattle. I'm a founding member of <strong>Quick Research</strong> — an autonomous deep-research service — where I designed the RAG architecture that grounds the agent in a customer's own organizational data, and built the secure tool-use integrations that let it query third-party financial providers like FactSet and S&amp;P.</p>
+        <p>Before AWS, I spent four and a half years at <strong>Amazon Customer Service</strong>, working across the chat platform that handles 100% of global customer service traffic — chat initiation APIs, the migration from a rules engine to a GenAI-powered chatbot, and an LLM-based silent CSAT scorer. Before that: <strong>Citrix R&amp;D</strong> in Bangalore for nearly four years, building product analytics and translation tooling.</p>
+        <p>I hold three U.S. patents in secure file sharing and offline content streaming, and I finished my MS in Computer Science at <strong>USC Viterbi</strong> in 2020.</p>
+        <p>Outside work, I take photographs, play a few musical instruments, and spend most weekends swimming or on a basketball court. I served as <strong>Membership Head</strong> at the IEEE Student Branch, Manipal — leading a team of twelve to record-breaking membership numbers.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work -->
+  <section id="work">
+    <div class="section-head">
+      <span class="num">02 / Work</span>
+      <h2>Selected experience</h2>
+    </div>
+
+    <div class="body-grid">
+      <span></span>
+      <ul class="work-list">
+
+        <li class="work-item">
+          <div class="work-row">
+            <div>
+              <div class="work-role">Software Development Engineer 2 <span class="at">— AWS, Agentic AI</span></div>
+              <div class="work-loc">Seattle, WA</div>
+            </div>
+            <div class="work-date">Jul 2025 — Present</div>
+          </div>
+          <p class="work-summary">Founding member of <strong>Quick Research</strong>, an autonomous deep-research service. Designed the RAG architecture that lets users ground the agent in their own org data, and built secure third-party integrations for premium financial data.</p>
+          <details class="work-detail">
+            <summary>Detail</summary>
+            <ul class="detail-list">
+              <li><b>RAG architecture.</b> End-to-end retrieval layer letting Quick Research securely incorporate internal organizational data — via Quick Suite — to contextually ground the agent's reasoning.</li>
+              <li><b>Third-party data integrations.</b> Secure tool-use integrations for premium providers (FactSet, S&amp;P), so the agent can autonomously query, retrieve, and synthesize external market data alongside the user's internal context.</li>
+            </ul>
+          </details>
+        </li>
+
+        <li class="work-item">
+          <div class="work-row">
+            <div>
+              <div class="work-role">Software Development Engineer 2 / 1 <span class="at">— Amazon Customer Service</span></div>
+              <div class="work-loc">Seattle, WA</div>
+            </div>
+            <div class="work-date">Feb 2021 — Jul 2025</div>
+          </div>
+          <p class="work-summary">Four and a half years on the chat platform that handles 100% of global Amazon customer service chat traffic — initiation APIs, the migration to a GenAI-powered chatbot, automated concession resolutions, and an LLM-based silent CSAT scorer.</p>
+          <details class="work-detail">
+            <summary>Detail</summary>
+            <ul class="detail-list">
+              <li><b>Chat Initiation API.</b> High-availability REST API integrating with six backend systems; now handles 100% of global Amazon customer service chat traffic — millions of daily interactions.</li>
+              <li><b>GenAI chatbot migration.</b> Helped migrate the legacy Customer Service Chatbot to a GenAI platform, integrating LLMs for intent detection and resolution and expanding coverage across all customer device types.</li>
+              <li><b>Self-service concessions.</b> Led integration of AI chat and voice bots with multiple systems for high-volume cases ("item not received," missing shipment items) — <b>1.5M annual agent-contact reduction</b> in the US, expanding worldwide.</li>
+              <li><b>LLM-based CSAT analysis.</b> Conceived and implemented a silent customer-satisfaction scorer using LLMs over chat transcripts, predicting CSAT without adding survey fatigue.</li>
+              <li><b>GraphQL migration.</b> Deprecated a legacy customer-data service and re-exposed it via a reusable GraphQL interface — over 20% operational-excellence improvement.</li>
+              <li><b>Reusable widgets &amp; security.</b> Shipped interactive widgets for order/refund tracking across CS platforms, plus a defense for critical vulnerabilities across all CS bot platforms.</li>
+              <li><b>CS Worldwide Hackathon — Judge's Favorite ×2.</b> 2024: GenAI code-documentation platform on AWS Bedrock. 2022: cross-platform mobile chat-notification system.</li>
+            </ul>
+          </details>
+        </li>
+
+        <li class="work-item">
+          <div class="work-row">
+            <div>
+              <div class="work-role">Software Development Engineer Intern <span class="at">— Amazon</span></div>
+              <div class="work-loc">Seattle, WA</div>
+            </div>
+            <div class="work-date">May — Aug 2020</div>
+          </div>
+          <p class="work-summary">Enabled the Customer Service Chatbot to handle multi-item concessions. Built a multi-item picker in React and the backend support for damaged, missing, and Fresh-order scenarios — over 100,000 fewer agent contacts annually in the US.</p>
+        </li>
+
+        <li class="work-item">
+          <div class="work-row">
+            <div>
+              <div class="work-role">Student Software Developer <span class="at">— USC Norris Comprehensive Cancer Center</span></div>
+              <div class="work-loc">Los Angeles, CA</div>
+            </div>
+            <div class="work-date">May 2019 — May 2020</div>
+          </div>
+          <p class="work-summary">Built a cancer-research publications portal used by eight leading cancer centers including Stanford and Norris.</p>
+        </li>
+
+        <li class="work-item">
+          <div class="work-row">
+            <div>
+              <div class="work-role">Software Engineer 2 / 1 / Intern <span class="at">— Citrix Systems</span></div>
+              <div class="work-loc">Bangalore, India</div>
+            </div>
+            <div class="work-date">Jan 2015 — Nov 2018</div>
+          </div>
+          <p class="work-summary">Almost four years across product analytics, translations infrastructure, and the customer-feedback systems for the Globalization Services team. Two patents originated here.</p>
+          <details class="work-detail">
+            <summary>Detail</summary>
+            <ul class="detail-list">
+              <li><b>Product Usage Analytics.</b> End-to-end pipeline in Python + Tableau unifying CEIP, Google Analytics, and app-store data into one source of truth for product decisions across all Citrix products.</li>
+              <li><b>Citrix Translations Platform.</b> Internal translations platform with .NET / C# REST services for UI-string management and real-time progress tracking.</li>
+              <li><b>Customer Case Analytics.</b> Python framework to fetch, filter, and classify Salesforce support cases — improved triage and resolution efficiency.</li>
+              <li><b>Voice of Customer Analysis.</b> NLTK-based sentiment system over app-store reviews and Twitter, feeding business decisions.</li>
+              <li><b>Citrix Documentation Feedback.</b> Feedback collection and analytics for docs.citrix.com.</li>
+              <li><b>Citrix Video Library.</b> Led a team of four (and three cross-functional teams) to deploy the internal video library.</li>
+              <li><b>Lean Innovation Challenge.</b> Top 3 of 98 in 2018 (workflow automation — spun out as internal startup); top 5 of 150 in 2017 (patented offline file-sharing).</li>
+            </ul>
+          </details>
+        </li>
+
+      </ul>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <div class="section-head">
+      <span class="num">03 / Projects</span>
+      <h2>Academic work</h2>
+    </div>
+    <div class="body-grid">
+      <span></span>
+      <div class="projects">
+
+        <div class="project">
+          <span class="pnum">P-01</span>
+          <span class="ptitle">Brain–Computer Interface for IoT control</span>
+          <span class="pmeta">BCI · Signal processing</span>
+          <p>BCI prototype enabling hands-free control of IoT devices and computers — an accessibility tool for individuals with paralysis. Focused on real-time signal processing and system integration.</p>
+        </div>
+
+        <div class="project">
+          <span class="pnum">P-02</span>
+          <span class="ptitle">Weather applications</span>
+          <span class="pmeta">Angular · Node.js · Android</span>
+          <p>Real-time weather web app in Angular + Node.js with a companion Android app, built around high availability and efficient data fetching. CSCI-571 course project at USC.</p>
+        </div>
+
+        <div class="project">
+          <span class="pnum">P-03</span>
+          <span class="ptitle">Recommender systems on Yelp</span>
+          <span class="pmeta">Spark · Python · Scala</span>
+          <p>Model, user, and item-based collaborative-filtering recommenders on the Yelp dataset, optimized for performance and scale. INF-553 Data Mining at USC.</p>
+        </div>
+
+        <div class="project">
+          <span class="pnum">P-04</span>
+          <span class="ptitle">Stock-market prediction with big data</span>
+          <span class="pmeta">MapReduce · NLP</span>
+          <p>Sentiment-driven price-prediction model for oil securities, running MapReduce over large unstructured streams from Twitter and news feeds.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements -->
+  <section id="achievements">
+    <div class="section-head">
+      <span class="num">04 / Recognition</span>
+      <h2>Achievements</h2>
+    </div>
+    <div class="body-grid">
+      <span></span>
+      <div class="achv-grid">
+
+        <article class="achv">
+          <div class="ah">
+            <h3>CS Worldwide Hackathon — Judge's Favorite</h3>
+            <span class="adate">2022 &amp; 2024</span>
+          </div>
+          <p>2024: GenAI-powered code-documentation platform on AWS Bedrock that auto-generates and updates code docs across Amazon. 2022: cross-platform mobile chat-notification system that cut chat park rates.</p>
+        </article>
+
+        <article class="achv">
+          <a class="achv-photo" href="https://chiragag.github.io/images/MarkPitch.jpg" target="_blank" rel="noopener">
+            <img src="https://chiragag.github.io/images/MarkPitch.jpg" alt="Presenting at F8 to Mark Zuckerberg" loading="lazy" />
+          </a>
+          <div class="ah">
+            <h3>F8 Hackathon</h3>
+            <span class="adate">May 2019</span>
+          </div>
+          <p>Invited by Facebook to F8. Built an AR-based education platform with Spark AR Studio and React, and presented to Meta CEO Mark Zuckerberg.</p>
+          <a class="alink" href="https://devpost.com/software/arc-eygjz3" target="_blank" rel="noopener">↗ Devpost</a>
+        </article>
+
+        <article class="achv">
+          <a class="achv-photo" href="https://chiragag.github.io/images/HackSCWin.jpg" target="_blank" rel="noopener">
+            <img src="https://chiragag.github.io/images/HackSCWin.jpg" alt="HackSC win" loading="lazy" />
+          </a>
+          <div class="ah">
+            <h3>HackSC Winner</h3>
+            <span class="adate">Apr 2019</span>
+          </div>
+          <p>Won the Facebook award at HackSC for BSMART — an AR-powered IoT platform to control smart devices and Tesla cars.</p>
+          <a class="alink" href="https://devpost.com/software/bsmart" target="_blank" rel="noopener">↗ Devpost</a>
+        </article>
+
+        <article class="achv">
+          <a class="achv-photo" href="https://chiragag.github.io/images/Citrix/LIC_Finalist_08_18.png" target="_blank" rel="noopener">
+            <img src="https://chiragag.github.io/images/Citrix/LIC_Finalist_08_18.png" alt="Lean Innovation Challenge 2018 finalist" loading="lazy" />
+          </a>
+          <div class="ah">
+            <h3>Lean Innovation Challenge — Finalist</h3>
+            <span class="adate">2017 &amp; 2018</span>
+          </div>
+          <p>Top 3 of 98 in 2018 (workflow automation — spun out as an internal Citrix startup); top 5 of 150 in 2017 (patented secure offline file sharing).</p>
+        </article>
+
+        <article class="achv">
+          <a class="achv-photo" href="https://chiragag.github.io/images/Citrix/QA_Q1_18.png" target="_blank" rel="noopener">
+            <img src="https://chiragag.github.io/images/Citrix/QA_Q1_18.png" alt="Citrix Quality Award" loading="lazy" />
+          </a>
+          <div class="ah">
+            <h3>Citrix Quality &amp; Spot Awards</h3>
+            <span class="adate">2016 — 2018</span>
+          </div>
+          <p>Three Quality Awards (Customer Case Analytics, Product Usage Analytics, Citrix Translations Platform) and two Spot Awards (Product Usage Analytics, Citrix Video Library).</p>
+        </article>
+
+      </div>
+
+      <details class="more-achv">
+        <summary>Earlier recognitions — Citrix, 2016–2017</summary>
+        <ul class="more-list">
+          <li>
+            <a class="mini-photo" href="https://chiragag.github.io/images/Citrix/LIC_12_17.png" target="_blank" rel="noopener">
+              <img src="https://chiragag.github.io/images/Citrix/LIC_12_17.png" alt="Citrix Lean Startup Bootcamp" loading="lazy" />
+            </a>
+            <div>
+              <div class="mtitle">Citrix Lean Startup Certification <span class="mdate">· Dec 2017</span></div>
+              <p>Completed the Lean Startup Bootcamp for Lean Innovation Challenge finalists — product development through business-hypothesis-driven experimentation, iterative releases, and validated learning via customer interviews.</p>
+            </div>
+          </li>
+          <li>
+            <a class="mini-photo" href="https://chiragag.github.io/images/Citrix/TechnicalInitiatives_12_17.png" target="_blank" rel="noopener">
+              <img src="https://chiragag.github.io/images/Citrix/TechnicalInitiatives_12_17.png" alt="Technical Initiatives Excellence Citation" loading="lazy" />
+            </a>
+            <div>
+              <div class="mtitle">India Technical Initiatives Excellence Citation <span class="mdate">· Dec 2017</span></div>
+              <p>Volunteered as Citrix India Technical Initiatives Ambassador organizing Tech Fairs, Innovation Days, and tooling support for technical events.</p>
+            </div>
+          </li>
+          <li>
+            <a class="mini-photo" href="https://chiragag.github.io/images/Citrix/QA_Q3_17.png" target="_blank" rel="noopener">
+              <img src="https://chiragag.github.io/images/Citrix/QA_Q3_17.png" alt="Citrix Quality Award Q3 2017" loading="lazy" />
+            </a>
+            <div>
+              <div class="mtitle">Q3 2017 Citrix Quality Award <span class="mdate">· Sep 2017</span></div>
+            </div>
+          </li>
+          <li>
+            <a class="mini-photo" href="https://chiragag.github.io/images/Citrix/QA_Q1_17.png" target="_blank" rel="noopener">
+              <img src="https://chiragag.github.io/images/Citrix/QA_Q1_17.png" alt="Citrix Quality Award Q1 2017" loading="lazy" />
+            </a>
+            <div>
+              <div class="mtitle">Q1 2017 Citrix Quality Award <span class="mdate">· Mar 2017</span></div>
+            </div>
+          </li>
+          <li>
+            <a class="mini-photo" href="https://chiragag.github.io/images/Citrix/Sentiment_07_16.png" target="_blank" rel="noopener">
+              <img src="https://chiragag.github.io/images/Citrix/Sentiment_07_16.png" alt="Sentiment Analysis project recognition" loading="lazy" />
+            </a>
+            <div>
+              <div class="mtitle">Project Recognition — Sentiment Analysis <span class="mdate">· Jul 2016</span></div>
+              <p>End-to-end automated system for Global Customer Sentiment Analysis on customer reviews.</p>
+            </div>
+          </li>
+          <li>
+            <a class="mini-photo" href="https://chiragag.github.io/images/Citrix/TechFair_05_16.png" target="_blank" rel="noopener">
+              <img src="https://chiragag.github.io/images/Citrix/TechFair_05_16.png" alt="Tech Fair 2016 volunteer" loading="lazy" />
+            </a>
+            <div>
+              <div class="mtitle">Volunteer — Citrix Tech Fair 2016 <span class="mdate">· May 2016</span></div>
+            </div>
+          </li>
+        </ul>
+      </details>
+    </div>
+  </section>
+
+  <!-- Patents -->
+  <section id="patents">
+    <div class="section-head">
+      <span class="num">05 / Patents</span>
+      <h2>Granted</h2>
+    </div>
+    <div class="body-grid">
+      <span></span>
+      <ul class="patents">
+        <li>
+          <span class="ptitle">Authentication for secure file sharing</span>
+          <span class="pno">US 11,831,646 B2</span>
+          <p class="pdate">Issued November 2023</p>
+        </li>
+        <li>
+          <span class="ptitle">Secure offline streaming of content</span>
+          <span class="pno">US 11,010,486 B2</span>
+          <p class="pdate">Issued May 2021</p>
+        </li>
+        <li>
+          <span class="ptitle">Cloud-authenticated offline file sharing</span>
+          <span class="pno">US 10,834,170 B2</span>
+          <p class="pdate">Issued November 2020</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <div class="section-head">
+      <span class="num">06 / Toolkit</span>
+      <h2>Skills</h2>
+    </div>
+    <div class="body-grid">
+      <span></span>
+      <div class="skills">
+        <div class="group">
+          <h4>Focus areas</h4>
+          <div class="chips">
+            <span class="chip">Agentic AI</span>
+            <span class="chip">GenAI / LLMs</span>
+            <span class="chip">RAG</span>
+            <span class="chip">Distributed systems</span>
+            <span class="chip">Conversational AI</span>
+            <span class="chip">GraphQL</span>
+          </div>
+        </div>
+        <div class="group">
+          <h4>Languages</h4>
+          <div class="chips">
+            <span class="chip">Java</span>
+            <span class="chip">Python</span>
+            <span class="chip">TypeScript</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">C++</span>
+            <span class="chip">C#</span>
+            <span class="chip">SQL</span>
+            <span class="chip">PHP</span>
+            <span class="chip">.NET</span>
+            <span class="chip">React</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education">
+    <div class="section-head">
+      <span class="num">07 / Education</span>
+      <h2>Schools</h2>
+    </div>
+    <div class="body-grid">
+      <span></span>
+      <ul class="edu">
+        <li>
+          <div>
+            <div class="deg">M.S., Computer Science</div>
+            <div class="school">University of Southern California — Los Angeles</div>
+          </div>
+          <span class="year">2019 — 2020</span>
+          <span class="gpa">GPA 3.9 / 4.0</span>
+        </li>
+        <li>
+          <div>
+            <div class="deg">B.Tech., Computer Science &amp; Engineering</div>
+            <div class="school">Manipal Institute of Technology — Manipal, India</div>
+          </div>
+          <span class="year">2011 — 2015</span>
+          <span class="gpa">CGPA 8.81 / 10</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <div class="section-head">
+      <span class="num">08 / Contact</span>
+      <h2>Say <em>hello</em></h2>
+    </div>
+    <div class="body-grid">
+      <span></span>
+      <div class="channels">
+        <a href="https://www.linkedin.com/in/chiragagarwal2511/" target="_blank" rel="noopener">
+          <span class="label">LinkedIn</span>
+          <span class="value">in/chiragagarwal2511</span>
+        </a>
+        <a href="https://github.com/chiragag" target="_blank" rel="noopener">
+          <span class="label">GitHub</span>
+          <span class="value">github.com/chiragag</span>
+        </a>
+        <a href="https://scholar.google.com/citations?user=S0v8A_MAAAAJ&hl=en" target="_blank" rel="noopener">
+          <span class="label">Google Scholar</span>
+          <span class="value">Publications &amp; patents</span>
+        </a>
+        <a href="https://chiragag.github.io/files/Chirag_Agarwal_Resume.pdf" target="_blank" rel="noopener">
+          <span class="label">Resume</span>
+          <span class="value">PDF — download</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>© 2026 Chirag Agarwal</span>
+    <span>Built in HTML — last updated May 2026</span>
+  </footer>
+
+</div>
+
+
+
+</body>
+</html>
